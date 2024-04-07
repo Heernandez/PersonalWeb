@@ -1,0 +1,19 @@
+{% extends 'core/base.html' %}
+<!-- Nombre en la pestaña-->
+{% block title %}Portada{% endblock %} 
+
+<!-- Imagen  de blackground-->
+{% block img_background %}{% load static %}{% static 'core/img/home-bg.jpg' %}{% endblock %}
+
+<!-- Titulo y subtitulo-->
+{% block headers %}
+    <h1>Luis Hernández</h1>
+    <span class="subheading">Ingeniero de Software</span>
+{% endblock %} 
+
+<!-- Contenido-->
+{% block content %}
+<div class="row">
+    <h1>Home</h1>
+</div>
+{% endblock %}

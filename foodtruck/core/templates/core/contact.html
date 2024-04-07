@@ -1,0 +1,23 @@
+{% extends 'core/base.html' %}
+<!-- Nombre en la pestaña-->
+{% block title %}Contact{% endblock %} 
+
+<!-- Imagen  de blackground-->
+{% block img_background %}{% load static %}{% static 'core/img/contact-bg.jpg' %}{% endblock %}
+
+<!-- Titulo y subtitulo-->
+{% block headers %}
+    <h1>Contacto</h1>
+    <span class="subheading">Asesoría</span>
+{% endblock %} 
+<!-- Contenido-->
+{% block content %}
+<div class="row">
+    <div class="col-lg-8 col-md-10 mx-auto">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe nostrum ullam eveniet pariatur voluptates odit, fuga atque ea nobis sit soluta odio, adipisci quas excepturi maxime quae totam ducimus consectetur?</p>
+        <br>
+        <p><b>Teléfono:</b> +57 312 606 8064</p>
+        <p><b>Honorarios:</b> 60€/h (precio base)</p>
+    </div>
+</div>
+{% endblock %}

@@ -16,7 +16,18 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.conf import settings
+from core import views as core_views
+from portfolio import views as portfolio_views
 
 urlpatterns = [
+    path("",core_views.home, name = "homePage"),
+    path("about/",core_views.about, name = "aboutPage"),
+    path("portfolio/",portfolio_views.portfolio, name = "portfolioPage"),
+    path("contact/",core_views.contact, name = "contactPage"),
     path("admin/", admin.site.urls),
 ]
+
+if settings.DEBUG:
+    from django.conf.urls.static import static
+    urlpatterns+= static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
